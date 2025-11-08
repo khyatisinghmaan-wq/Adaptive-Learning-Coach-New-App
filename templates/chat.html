@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-xl font-semibold mb-3">Chat (Mock RAG)</h2>
+<form method="post" class="flex gap-2 mb-4">
+  <input class="border p-2 rounded w-full" type="text" name="query" placeholder="Ask about ALC, lessons, motivation..." required/>
+  <button class="bg-blue-600 text-white px-4 py-2 rounded" type="submit">Ask</button>
+</form>
+{% if answer %}
+  <div class="p-3 bg-white rounded shadow mb-2">
+    <div class="font-semibold mb-1">Answer</div>
+    <div class="whitespace-pre-wrap">{{ answer }}</div>
+  </div>
+{% endif %}
+{% endblock %}
